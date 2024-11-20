@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { ProductsList } from "./components/ProductsList";
 
 const baseUrl = "https://dfef-dmrn-tps-default-rtdb.firebaseio.com";
@@ -27,8 +27,14 @@ export default function App() {
   }, []);
 
   return (
-    <View>
+    <View style={styles.container}>
       <ProductsList products={data} />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    paddingBottom: 115,
+  },
+});
