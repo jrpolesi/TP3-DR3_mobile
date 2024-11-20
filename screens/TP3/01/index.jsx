@@ -8,7 +8,13 @@ export default function App() {
   return (
     <NavigationContainer independent={true}>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            headerLeft: null,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

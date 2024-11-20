@@ -7,11 +7,6 @@ const TODO_LIST = [
   "Estudar React",
   "Estudar Node.js",
   "Estudar MongoDB",
-  "Estudar Express",
-  "Estudar TypeScript",
-  "Estudar Python",
-  "Estudar Django",
-  "Estudar Flask",
 ];
 
 export default function App() {
