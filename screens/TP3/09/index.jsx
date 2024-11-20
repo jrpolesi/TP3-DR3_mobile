@@ -35,6 +35,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: 115,
+    flex: 1,
   },
 });

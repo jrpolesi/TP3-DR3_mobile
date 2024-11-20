@@ -29,5 +29,6 @@ export function ProductsList({ products }) {
 const styles = StyleSheet.create({
   container: {
     gap: 8,
+    flex: 1,
   },
 });

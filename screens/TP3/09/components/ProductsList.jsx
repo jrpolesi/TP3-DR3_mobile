@@ -32,6 +32,7 @@ export function ProductsList({ products }) {
 const styles = StyleSheet.create({
   container: {
     gap: 8,
+    flex: 1,
   },
 });
 
@@ -53,7 +54,11 @@ function filterProducts(products, filter) {
 }
 
 function sortProducts(products, sort) {
-  return products.sort((a, b) => {
+  if (sort === SORT_VALUES.none) {
+    return products;
+  }
+
+  return [...products].sort((a, b) => {
     if (sort === SORT_VALUES.nameAsc) {
       return a.name.localeCompare(b.name);
     }

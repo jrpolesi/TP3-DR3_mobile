@@ -1,34 +1,32 @@
-import { Picker } from "@react-native-picker/picker";
 import { useState } from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
+import ModalSelector from "react-native-modal-selector";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 export const SORT_VALUES = {
   none: "none",
   nameAsc: "name_asc",
   nameDesc: "name_desc",
-  priceAsc: "price_asc",
-  priceDesc: "price_desc",
 };
 
 const SORT_OPTIONS = [
-  { label: "Nenhum", value: SORT_VALUES.none },
-  { label: "Nome (A-Z)", value: SORT_VALUES.nameAsc },
-  { label: "Nome (Z-A)", value: SORT_VALUES.nameDesc },
-  { label: "Preço (Menor)", value: SORT_VALUES.priceAsc },
-  { label: "Preço (Maior)", value: SORT_VALUES.priceDesc },
+  { label: "Nenhum", key: SORT_VALUES.none },
+  { label: "Nome (A-Z)", key: SORT_VALUES.nameAsc },
+  { label: "Nome (Z-A)", key: SORT_VALUES.nameDesc },
 ];
 
 export function ListActions({ filter, onChangeFilter, sort, onChangeSort }) {
-  const [value, setValue] = useState(filter);
+  const [filterValue, setFilterValue] = useState(filter);
+
+  const selectedSort = SORT_OPTIONS.find(({ key }) => key === sort);
 
   return (
     <View style={styles.container}>
-      <View>
+      <View style={styles.actionsContainer}>
         <View style={styles.inputContainer}>
           <TextInput
-            value={value}
-            onChangeText={(value) => setValue(() => value.trimStart())}
+            value={filterValue}
+            onChangeText={(value) => setFilterValue(() => value.trimStart())}
             placeholder="Buscar..."
             style={styles.input}
           />
@@ -42,30 +40,27 @@ export function ListActions({ filter, onChangeFilter, sort, onChangeSort }) {
             }}
             borderRadius={0}
             onPress={() => {
-              onChangeFilter(value);
+              onChangeFilter(filterValue);
 
-              setValue("");
+              setFilterValue("");
             }}
           />
         </View>
-        <Picker
-          selectedValue={sort}
-          onValueChange={(itemValue) => onChangeSort(itemValue)}
-          mode="dropdown"
-        >
-          {SORT_OPTIONS.map(({ label, value }) => (
-            <Picker.Item key={value} label={label} value={value} />
-          ))}
-        </Picker>
+
+        <ModalSelector
+          data={SORT_OPTIONS}
+          onChange={(opt) => onChangeSort(opt.key)}
+          initValue={"Ordenar por..."}
+          cancelText="Cancelar"
+        />
       </View>
-      <View>
+      <View style={styles.display}>
         {filter && (
           <Text style={styles.displayText}>Filtrado por: {filter}</Text>
         )}
-        {sort && (
+        {sort && sort !== SORT_VALUES.none && (
           <Text style={styles.displayText}>
-            Ordenado por:{" "}
-            {SORT_OPTIONS.find(({ value }) => value === sort).label}
+            Ordenado por: {selectedSort?.label}
           </Text>
         )}
       </View>
@@ -78,7 +73,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginVertical: 10,
     marginBottom: 0,
-    gap: 8,
+    gap: 10,
+  },
+  actionsContainer: {
+    gap: 6,
   },
   inputContainer: {
     flexDirection: "row",
@@ -91,6 +89,12 @@ const styles = StyleSheet.create({
     padding: 8,
     backgroundColor: "#ebebeb",
     border: "none",
+  },
+  display: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    gap: 8,
   },
   displayText: {
     color: "#888",
