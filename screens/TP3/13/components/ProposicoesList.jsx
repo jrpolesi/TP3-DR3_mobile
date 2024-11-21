@@ -4,8 +4,10 @@ import { Proposicao } from "./Proposicao";
 export function ProposicoesList({
   data,
   isLoading,
+  isRefreshing,
   fetchNextPage,
   hasNextPage,
+  refreshData,
 }) {
   return (
     <FlatList
@@ -17,6 +19,8 @@ export function ProposicoesList({
         hasNextPage && fetchNextPage();
       }}
       ListFooterComponent={isLoading && ActivityIndicator}
+      refreshing={isRefreshing}
+      onRefresh={refreshData}
     />
   );
 }

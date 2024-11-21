@@ -16,7 +16,6 @@ export function useQueryProposicoes() {
 
     setIsLoading(true);
     try {
-      console.log(nextPage);
       const res = await fetch(nextPage);
       const data = await res.json();
 
