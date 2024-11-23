@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import Icon from "react-native-vector-icons/FontAwesome.js";
+import Icon from "react-native-vector-icons/FontAwesome";
 import { ActiveDemocracyList } from "./ActiveDemocracyList.jsx";
 import { Agree } from "./Agree.jsx";
 import { Disagree } from "./Disagree.jsx";
