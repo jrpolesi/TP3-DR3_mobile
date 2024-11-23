@@ -4,5 +4,7 @@
     "Cineflix",
     "Ionicons",
     "proposicao"
-  ]
+  ],
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifierEnding": "js"
 }

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { ProposicoesList } from "../components/ProposicoesList";
+import { ProposicoesList } from "../components/ProposicoesList.jsx";
 
 export function Disagree({ data }) {
   return (

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Question } from "../components/Question";
+import { Question } from "../components/Question.jsx";
 
 export function Questions({ navigation, questions, handleAnswer, route }) {
   const currentQuestionData = questions.find(

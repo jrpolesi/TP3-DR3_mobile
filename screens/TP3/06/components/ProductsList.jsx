@@ -1,5 +1,5 @@
 import { FlatList } from "react-native";
-import { ProductCard } from "./ProductCard";
+import { ProductCard } from "./ProductCard.jsx";
 
 export function ProductsList({ products }) {
   return (

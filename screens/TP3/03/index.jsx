@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { TodoList } from "./components/TodoList";
+import { TodoList } from "./components/TodoList.jsx";
 
 const TODO_LIST = [
   "Estudar React Native",

@@ -1,5 +1,5 @@
 import { ScrollView } from "react-native";
-import { TodoItem } from "./TodoItem";
+import { TodoItem } from "./TodoItem.jsx";
 
 export function TodoList({ todos }) {
   return (

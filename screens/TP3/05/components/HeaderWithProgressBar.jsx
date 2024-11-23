@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { ProgressBar } from "./ProgressBar";
+import { ProgressBar } from "./ProgressBar.jsx";
 
 export function HeaderWithProgressBar({ current, total }) {
   return (

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from "react-native-vector-icons/FontAwesome.js";
 
 export function Proposicao({ proposicao, onUserOpinion }) {
   return (

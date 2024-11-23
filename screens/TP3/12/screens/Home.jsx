@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import { ProposicoesList } from "../components/ProposicoesList";
+import { ProposicoesList } from "../components/ProposicoesList.jsx";
 
 export function Home({ data, isLoading, fetchNextPage, hasNextPage }) {
   return (

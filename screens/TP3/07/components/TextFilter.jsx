@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from "react-native-vector-icons/FontAwesome.js";
 
 export function TextFilter({ filter, onChangeFilter }) {
   const [value, setValue] = useState(filter);

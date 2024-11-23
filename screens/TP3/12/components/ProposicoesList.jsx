@@ -1,5 +1,5 @@
 import { ActivityIndicator, FlatList } from "react-native";
-import { Proposicao } from "./Proposicao";
+import { Proposicao } from "./Proposicao.jsx";
 
 export function ProposicoesList({
   data,

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
-import { ListActions, SORT_VALUES } from "./ListActions";
-import { ProductCard } from "./ProductCard";
+import { ListActions, SORT_VALUES } from "./ListActions.jsx";
+import { ProductCard } from "./ProductCard.jsx";
 
 export function ProductsList({ products }) {
   const [filter, setFilter] = useState("");

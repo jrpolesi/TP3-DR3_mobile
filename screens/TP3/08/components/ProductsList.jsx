@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
-import { ProductCard } from "./ProductCard";
-import { TextFilter } from "./TextFilter";
+import { ProductCard } from "./ProductCard.jsx";
+import { TextFilter } from "./TextFilter.jsx";
 
 export function ProductsList({ products }) {
   const [filter, setFilter] = useState("");

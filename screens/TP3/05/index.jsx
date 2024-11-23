@@ -1,10 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useState } from "react";
-import { HeaderWithProgressBar } from "./components/HeaderWithProgressBar";
-import { Questions } from "./screens/Questions";
-import { Result } from "./screens/Result";
-import { Start } from "./screens/Start";
+import { HeaderWithProgressBar } from "./components/HeaderWithProgressBar.jsx";
+import { Questions } from "./screens/Questions.jsx";
+import { Result } from "./screens/Result.jsx";
+import { Start } from "./screens/Start.jsx";
 
 const Stack = createStackNavigator();
 

@@ -1,7 +1,7 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
-import { useQueryProposicoes } from "./hooks/useQueryProposicoes";
-import { Home } from "./screens/Home";
+import { useQueryProposicoes } from "./hooks/useQueryProposicoes.jsx";
+import { Home } from "./screens/Home.jsx";
 
 const DrawerNav = createDrawerNavigator();
 
