@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ActivityIndicator, StyleSheet, View } from "react-native";
-import { ProductsList } from "./components/ProductsList";
+import { ProductsList } from "./components/ProductsList.jsx";
 
 const baseUrl = "https://dfef-dmrn-tps-default-rtdb.firebaseio.com";
 

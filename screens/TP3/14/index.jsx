@@ -1,9 +1,9 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import { useState } from "react";
-import { useQueryProposicoes } from "./hooks/useQueryProposicoes";
-import { ActiveDemocracy } from "./screens/ActiveDemocracy";
-import { Home } from "./screens/Home";
+import { useQueryProposicoes } from "./hooks/useQueryProposicoes.jsx";
+import { ActiveDemocracy } from "./screens/ActiveDemocracy.jsx";
+import { Home } from "./screens/Home.jsx";
 
 const DrawerNav = createDrawerNavigator();
 
